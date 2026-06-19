@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Updates</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =====================================================================
+     LOCK SCREEN — shown first. Disappears once the right password is
+     entered. The password itself lives in script.js, not here.
+     ===================================================================== -->
+<div id="lock-screen">
+  <div class="lock-card">
+    <span class="stamp-icon">PRIVATE</span>
+    <h1>hi, it's just for friends</h1>
+    <p>enter the password to come in</p>
+    <form id="lock-form">
+      <input type="password" id="lock-input" placeholder="password" autocomplete="off">
+      <button type="submit">enter</button>
+    </form>
+    <div id="lock-error"></div>
+  </div>
+</div>
+
+
+<!-- =====================================================================
+     MAIN SITE — hidden until the password is correct.
+     ===================================================================== -->
+<div id="site">
+
+  <nav class="topnav">
+    <div class="wrap">
+      <a href="#" class="site-name">Skylar</a>
+      <div class="nav-links">
+        <a href="#updates">Updates</a>
+        <a href="#reading-writing">Reading &amp; Writing</a>
+        <a href="#travels">Travels</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <h1>hello, friends.</h1>
+    <p class="tagline">a small, password-locked corner of the internet for life updates, books, and wherever I've wandered off to.</p>
+    <hr class="rule">
+  </header>
+
+
+  <!-- ===================================================================
+       SECTION 1: LIFE UPDATES
+       To add a new update, copy one whole <div class="entry">...</div>
+       block and paste it right above the others (newest at the top).
+       =================================================================== -->
+  <section class="block wrap" id="updates">
+    <div class="block-header">
+      <h2>Life Updates</h2>
+      <span class="count">a running log</span>
+    </div>
+
+    <!-- EXAMPLE ENTRY — replace with your own -->
+    <div class="entry">
+      <div class="entry-meta"><span class="stamp">JUN 2026</span></div>
+      <div>
+        <h3>graduated! now what</h3>
+        <p>Wrapped up my last semester and walked at graduation. Spending the summer in LA before heading out east this fall — more on that soon.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="stamp">MAY 2026</span></div>
+      <div>
+        <h3>thesis, done and dusted</h3>
+        <p>Turned in the final draft after way too many late nights. Still can't quite believe it's finished.</p>
+      </div>
+    </div>
+    <!-- END EXAMPLE ENTRIES -->
+
+  </section>
+
+
+  <!-- ===================================================================
+       SECTION 2: READING & WRITING
+       Left column = books. Right column = writing projects / pieces.
+       Copy a <div class="book"> or <div class="writing-piece"> block to
+       add more.
+       =================================================================== -->
+  <section class="block wrap" id="reading-writing">
+    <div class="block-header">
+      <h2>Reading &amp; Writing</h2>
+      <span class="count">what I'm into lately</span>
+    </div>
+
+    <div class="rw-grid">
+      <div>
+        <h3 class="sub">Currently Reading</h3>
+
+        <!-- EXAMPLE — replace with your own -->
+        <div class="book">
+          <div class="book-title">The Magic Mountain</div>
+          <div class="book-author">Thomas Mann</div>
+        </div>
+        <div class="book">
+          <div class="book-title">The Human Stain</div>
+          <div class="book-author">Philip Roth</div>
+        </div>
+        <!-- END EXAMPLE -->
+      </div>
+
+      <div>
+        <h3 class="sub">Writing</h3>
+
+        <!-- EXAMPLE — replace with your own -->
+        <div class="writing-piece">
+          <div class="piece-title">an essay I'm tinkering with</div>
+          <div class="piece-venue">draft, unpublished</div>
+        </div>
+        <div class="writing-piece">
+          <div class="piece-title">undergraduate thesis</div>
+          <div class="piece-venue">Smith College, 2026</div>
+        </div>
+        <!-- END EXAMPLE -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       SECTION 3: TRAVELS
+       Copy a <div class="travel-card">...</div> block to add a new trip.
+       =================================================================== -->
+  <section class="block wrap" id="travels">
+    <div class="block-header">
+      <h2>Travels</h2>
+      <span class="count">where I've wandered</span>
+    </div>
+
+    <div class="travel-grid">
+      <!-- EXAMPLE — replace with your own -->
+      <div class="travel-card">
+        <div class="place">Vienna &amp; the Alps</div>
+        <p>May–June 2026 — a post-grad trip through Austria, ending in Dubrovnik.</p>
+      </div>
+      <div class="travel-card">
+        <div class="place">The Berkshires</div>
+        <p>Summer 2026 — teaching fellowship at NMH.</p>
+      </div>
+      <!-- END EXAMPLE -->
+    </div>
+  </section>
+
+  <footer>
+    <p>made with care, for friends only</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
